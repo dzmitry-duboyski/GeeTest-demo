@@ -19,7 +19,6 @@ const APIKEY = process.env.APIKEY;
   const t = new Date().getTime()
 
   const response = await fetch(`https://rucaptcha.com/api/v1/captcha-demo/gee-test/init-params?t=${t}`)
-  const a =                    `https://rucaptcha.com/api/v1/captcha-demo/gee-test/init-params?t=1675592612287`
 
   const data = await response.json()
   const challenge = data.challenge
@@ -32,7 +31,6 @@ const APIKEY = process.env.APIKEY;
 
   const solver = new Captcha.Solver(APIKEY)
 
-  // const extraParam = { api_server: 'https://rucaptcha.com/api/v1/captcha-demo/gee-test/'}
   const res = await solver.geetest({ gt: gt, challenge: challenge, pageurl: pageurl })
   
   try {
