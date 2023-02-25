@@ -1,44 +1,45 @@
-# Решение капчи GeeTest в Puppeteer
+<u><b>[English](README.md)</b></u> | [Русский](README.ru.md)
 
-## Запуск проекта
-### Клонирование проекта:
+# Example for solving of  GeeTest Captcha in Puppeteer
+
+## How to start
+### Cloning:
 `git clone https://github.com/dzmitry-duboyski/GeeTest-demo.git`
 
-### Установка зависимостей:
+### Installing dependencies:
 `npm install`
 
-<!-- Set your apikey in `.env` file -->
-### Укажите значение вашего APIKEY в файле `.env`.
+### Set your apikey in `.env` file
 
-### Запуск проекта:
+### Start:
 `npm run start`
 
 ---
 
-## Описание алгоритма решения GeeTest:
-1. Найти параметры качи `gt`, `challenge`, `api_server`:
+## Description of the GeeTest solution algorithm:
+1. Find captcha parameters `gt`, `challenge`, `api_server`:
 
-    1.1. Найти значение `gt` можно в коде страницы.
-    Скриншот:
-    ![значение gt в коде страницы](./screenshot/gt_value.png)
+    1.1. You can find the value of `gt` in the page code.
+    Screenshot:
+    ![the gt value in the page code](./screenshot/gt_value.png)
 
-    1.2 Найти значение `challenge` немного сложнее. 
-    Для этого необходимо найти запрос, который делает капча на этой странице, этот запрос должен содержать значение `challenge`. 
+    1.2 Finding the meaning of `challenge` is a bit more difficult. 
+    To do this, you need to find the request that the captcha makes on this page, this request must contain the value `challenge`.
 
-    Ответ на запрос будет в следующем формате:
-    `{"success":1,"challenge":"21aaa1c62221631516179b492b9e80cc","gt":"81388ea1fc187e0c335c0a8907ff2625"}`. Из этого ответа необходимо взять значение `challenge`. 
+    The response to the request will be in the following format:
+    `{"success":1,"challenge":"21aaa1c62221631516179b492b9e80cc","gt":"81388ea1fc187e0c335c0a8907ff2625"}`. From this answer, you need to take the value `challenge`. 
 
-    >Если рассматривать пример с капчей на странице [https://2captcha.com/demo/geetest](https://2captcha.com/demo/geetest?from=16653706), то в этом случае это будет запрос к https://2captcha.com/api/v1/captcha-demo/gee-test/. Ответ на этот запрос содержит необходимый `challenge`.
-    >Ответ: `{"success":1,"challenge":"21aaa1c62221631516179b492b9e80cc","gt":"81388ea1fc187e0c335c0a8907ff2625"}`.
+    >If we consider the example with a captcha on the page [https://2captcha.com/demo/geetest](https://2captcha.com/demo/geetest?from=16653706), then in this case it will be a request to https://2captcha.com/api/v1/captcha-demo/gee-test/. The response to this request contains the required `challenge'.
+    >Response: `{"success":1,"challenge":"21aaa1c62221631516179b492b9e80cc","gt":"81388ea1fc187e0c335c0a8907ff2625"}`.
     >
-    >Скриншот:
-    ![значение challenge в коде страницы](./screenshot/challenge_value.png)
+    >Screenshot:
+    ![the challenge value in the page code](./screenshot/challenge_value.png)
 
-    Подробнее про challenge можно почитать [тут](https://2captcha.com/p/geetest?from=16653706).
+    You can read more about the `challenge` on the [page](https://2captcha.com/p/geetest?from=16653706).
 
-2. Отправка капчи в API.
+2. Sending captcha to API.
 
-Для решения капчи, необходимо отправить в API найденные параметры капчи:
+To solve the captcha, you need to send the found captcha parameters to the API:
 ```json
 "key":"your_api_key",
 "method":"geetest"
@@ -47,9 +48,9 @@
 "challenge": "21aaa1c62221631516179b492b9e80cc"
 ```
 
-3. Получение решения капчи.
+3. Getting a answer for Captcha.
 
-После успешного решения капчи, API вернет ответ с решением. Пример ответа с решением от API:
+After successfully solving the captcha, the API will return a response with the solution. Example of a response with a solution from the API:
 ```json
 {
    "status": 1,
@@ -61,10 +62,10 @@
 }
 ```
 
-4. Вставка решения.
-Полученные значения необходмо вставить в соответствующие html элементы GeeTest капчи на странице.
+4. Using the solution.
+The resulting values must be inserted into the corresponding html elements of the GeeTest captcha on the page.
 
-Пример:
+Example:
 ```html
 <div class="geetest_form">
   <input type="hidden" name="geetest_challenge" value="fd4847c8a368356a0e3a6636392c2854k9">
@@ -73,16 +74,14 @@
 </div>
 ```
 
-Скриншот:
-![вставляем ответ в html элементы GeeTest капчи на странице](./screenshot/answer_in_html.png)
+Screenshot:
+![inserting the answer into the html elements of the GeeTest captcha on the page](./screenshot/answer_in_html.png)
 
-Готово. После этого можно переходить к выполнению действий на странице. В этом примере после этого происходит нажатие на кнопку "Проверить". 
+Done. After that, you can proceed to perform actions on the page. In this example, after that, the "Check" button is clicked. 
 
-Код решения доступен в файле [index.js](/index.js)
+The source code is available in the file [index.js](/index.js)
 
-Дополнительная информация:
-- [Документаця по отправке GeeTest](https://2captcha.com/2captcha-api#solving_geetest?from=16653706).
-- [Демо страница c GeeTest](https://2captcha.com/demo/geetest?from=16653706) с описанием решения.
-- [Подробнее о решении GeeTest](https://2captcha.com/p/geetest?from=16653706)
-
-https://2captcha.com/?from=16653706
+### Additional information:
+- [GeeTest Submission Documentation](https://2captcha.com/2captcha-api#solving_geetest?from=16653706).
+- [Demo page with GeeTest](https://2captcha.com/demo/geetest?from=16653706).
+- [Learn more about the GeeTest solving](https://2captcha.com/p/geetest?from=16653706).
