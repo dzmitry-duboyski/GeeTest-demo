@@ -1,6 +1,21 @@
 # Решение капчи GeeTest в Puppeteer
 
-## Алгоритм решения GeeTest:
+## Запуск проекта
+### Клонирование проекта:
+`git clone https://github.com/dzmitry-duboyski/GeeTest-demo.git`
+
+### Установка зависимостей:
+`npm install`
+
+<!-- Set your apikey in `.env` file -->
+### Укажите значение вашего APIKEY в файле `.env`.
+
+### Запуск проекта:
+`npm run start`
+
+---
+
+## Описание алгоритма решения GeeTest:
 1. Найти параметры качи `gt`, `challenge`, `api_server`:
 
     1.1. Найти значение `gt` можно в коде страницы.
@@ -13,13 +28,13 @@
     Ответ на запрос будет в следующем формате:
     `{"success":1,"challenge":"21aaa1c62221631516179b492b9e80cc","gt":"81388ea1fc187e0c335c0a8907ff2625"}`. Из этого ответа необходимо взять значение `challenge`. 
 
-    >Если рассматривать пример с капчей на странице https://rucaptcha.com/demo/geetest, то в этом случае это будет запрос к https://rucaptcha.com/api/v1/captcha-demo/gee-test/. Ответ на этот запрос содержит необходимый `challenge`.
+    >Если рассматривать пример с капчей на странице [https://2captcha.com/demo/geetest](https://2captcha.com/demo/geetest?from=16653706), то в этом случае это будет запрос к https://2captcha.com/api/v1/captcha-demo/gee-test/. Ответ на этот запрос содержит необходимый `challenge`.
     >Ответ: `{"success":1,"challenge":"21aaa1c62221631516179b492b9e80cc","gt":"81388ea1fc187e0c335c0a8907ff2625"}`.
     >
     >Скриншот:
     ![значение challenge в коде страницы](./screenshot/challenge_value.png)
 
-    Подробнее про challenge можно почитать [тут](https://rucaptcha.com/api-rucaptcha#solving_geetest:~:text=%D0%92%D0%B0%D0%B6%D0%BD%D0%BE%3A%20%D0%B4%D0%BB%D1%8F,%D0%B8%20%D0%BF%D0%B0%D1%80%D1%81%D0%B8%D1%82%D1%8C%20%D0%B5%D0%B3%D0%BE.).
+    Подробнее про challenge можно почитать [тут](https://2captcha.com/p/geetest?from=16653706).
 
 2. Отправка капчи в API.
 
@@ -27,7 +42,7 @@
 ```json
 "key":"your_api_key",
 "method":"geetest"
-"pageurl":"https://rucaptcha.com/demo/geetest"
+"pageurl":"https://2captcha.com/demo/geetest"
 "gt": "81388ea1fc187e0c335c0a8907ff2625",
 "challenge": "21aaa1c62221631516179b492b9e80cc"
 ```
@@ -66,5 +81,8 @@
 Код решения доступен в файле [index.js](/index.js)
 
 Дополнительная информация:
-- [Документаця по отправке GeeTest](https://rucaptcha.com/api-rucaptcha#solving_geetest).
-- [Демо страница GeeTest](https://rucaptcha.com/demo/geetest) с описанием решения.
+- [Документаця по отправке GeeTest](https://2captcha.com/2captcha-api#solving_geetest?from=16653706).
+- [Демо страница c GeeTest](https://2captcha.com/demo/geetest?from=16653706) с описанием решения.
+- [Подробнее о решении GeeTest](https://2captcha.com/p/geetest?from=16653706)
+
+https://2captcha.com/?from=16653706
