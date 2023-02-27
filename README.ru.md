@@ -1,4 +1,4 @@
-[English](README.md) | <u><b>[Русский](README.ru.md)</b></u>
+[English](README.md) | [中国语文科](README.zh.md) | <b>[Русский](README.ru.md)<b>
 
 ![geetest captcha](./screenshot/geetest.png)
 
@@ -17,6 +17,10 @@
 `npm run start`
 
 ---
+
+>Платформа безопасности [GeeTest](https://www.geetest.com/) используется на многих популярных сайтах.  В этом руководстве описанно как успешно пройти проверку безопастности [GeeTest](https://www.geetest.com/) используя сервис [2Captcha.com](https://2captcha.com/?from=16653706) и [Puppeteer](https://pptr.dev/).  Для успешного прохождения проверки необходимо иметь аккаунт в сервисе [2Captcha.com](https://2captcha.com/?from=16653706).
+
+В этом примере описано как решить капчу GeeTest на демо странице [https://2captcha.com/demo/geetest](https://2captcha.com/demo/geetest?from=16653706).
 
 ## Описание алгоритма решения GeeTest:
 1. Найти параметры капчи `gt`, `challenge`, `api_server`:
@@ -65,7 +69,7 @@
 ```
 
 4. Применение решения.
-Полученные значения необходмо вставить в соответствующие html элементы GeeTest капчи на странице.
+Полученные значения необходмо вставить в соответствующие `html` элементы GeeTest капчи на странице.
 
 Пример:
 ```html
