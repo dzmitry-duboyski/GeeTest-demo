@@ -1,5 +1,7 @@
 [English](README.md) | <u><b>[Русский](README.ru.md)</b></u>
 
+![geetest captcha](./screenshot/geetest.png)
+
 # Решение капчи GeeTest в Puppeteer
 
 ## Запуск проекта
