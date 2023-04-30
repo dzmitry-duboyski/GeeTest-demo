@@ -1,7 +1,7 @@
 {
-  "name": "test-2captcha",
+  "name": "solving-geetest",
   "version": "1.0.0",
-  "description": "",
+  "description": "Example for solving of GeeTest captcha using Puppeteer.",
   "type": "module",
   "main": "index.js",
   "scripts": {
