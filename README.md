@@ -19,7 +19,7 @@
 ---
 >[GeeTest](https://www.geetest.com/) security platform is used on many popular sites. In this manual, it is described how to successfully undergo a [GeeTest](https://www.geetest.com/) security check using service [2Captcha.com](https://2captcha.com/?from=16653706) and [Puppeteer](https://pptr.dev/). For a successful check of the [GeeTest](https://www.geetest.com/) captcha, you must have an account in the [2Captcha.com](https://2captcha.com/?from=16653706) service.
 
-This example describes how to solve captcha GeeTest on the demo page [https://2captcha.com/demo/geetestest](https://2captcha.com/demo/geetestest?from=16653706).
+This example describes how to solve captcha GeeTest on the demo page [https://2captcha.com/demo/geetest](https://2captcha.com/demo/geetest?from=16653706).
 
 ## Description of the GeeTest solution algorithm:
 1. Find captcha parameters `gt`, `challenge`, `api_server`:

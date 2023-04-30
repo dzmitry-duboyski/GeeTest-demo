@@ -20,7 +20,7 @@
 >[Geetest](https://www.geetest.com/)安全平台用於許多流行網站。 在本手冊中，描述瞭如何成功使用[2Captcha](https://2captcha.com/?from=16653706)和[Puppeteer](https://pptr.dev/)服務進行[Geetest](https://www.geetest.com/)安全檢查。 為了成功檢查支票，您必須在[2captcha.com](https://2captcha.com/?from=16653706)服務中擁有一個帳戶。
 
 
-此示例描述瞭如何在演示頁面上破解geetest [https://2captcha.com/demo/geetestest](https://2captcha.com/demo/geetestest?from=16653706)
+此示例描述瞭如何在演示頁面上破解geetest [https://2captcha.com/demo/geetest](https://2captcha.com/demo/geetest?from=16653706)
 
 
 ## 解决GeeTest的动作顺序：
