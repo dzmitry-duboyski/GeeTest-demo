@@ -10,9 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "2captcha-ts": "^1.0.5",
+    "2captcha-ts": "^2.0.0",
     "dotenv": "^16.0.3",
-    "node-fetch": "^3.3.0",
-    "puppeteer": "^19.6.2"
+    "node-fetch": "^3.3.1",
+    "puppeteer": "^19.11.1"
   }
 }
