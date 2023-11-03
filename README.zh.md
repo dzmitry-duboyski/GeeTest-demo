@@ -4,6 +4,9 @@
 
 # 描述如何使用Puppeteer通过GeeTest检查
 
+##
+这个例子清楚地展示了如何自动化"GeeTest"captcha解决方案。 在示例中，captcha在演示页面上被绕过，但绕过captcha的原理在任何地方都是相似的。
+
 ## 如何打开项目
 ### 克隆:
 `git clone https://github.com/dzmitry-duboyski/GeeTest-demo.git`
