@@ -2,7 +2,10 @@
 
 ![geetest captcha](./screenshot/geetest.png)
 
-# Example for solving of  GeeTest Captcha in Puppeteer
+# Example for solving of GeeTest Captcha in JavaScript using Puppeteer library
+
+# Description
+This example clearly shows how you can automate the GeeTest captcha solution. In the example, the captcha is bypassed on the [demo page](https://2captcha.com/demo/geetest), but the principle of bypassing the captcha is similar everywhere.
 
 ## How to start
 ### Cloning:
