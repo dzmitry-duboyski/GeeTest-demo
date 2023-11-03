@@ -4,6 +4,9 @@
 
 # Решение капчи GeeTest в Puppeteer
 
+## Описание
+Этот пример наглядно показывает, как вы можете автоматизировать решение капчи GeeTest в JavaScript. В примере капча решается на [демо странице](https://2captcha.com/demo/geetest?from=16653706), но принцип обхода капчи везде одинаков.
+
 ## Запуск проекта
 ### Клонирование проекта:
 `git clone https://github.com/dzmitry-duboyski/GeeTest-demo.git`
